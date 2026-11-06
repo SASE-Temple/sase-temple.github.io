@@ -1,0 +1,7 @@
+# Original photos (RAW files, hundreds of MB); the site uses assets/img instead
+WEBSITE photos/
+
+# OS clutter
+.DS_Store
+Thumbs.db
+desktop.ini
