@@ -1,10 +1,9 @@
-// Temple SASE — header state, mobile menu, scroll reveals and hero photo drift.
+// Temple SASE: header state, mobile menu, copy-email button, award "expand all", footer year.
 (function () {
   document.documentElement.classList.remove("no-js");
 
-  var reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
   var header = document.querySelector(".site-header");
-  var hero = document.querySelector("[data-hero]");
+  var hero = document.querySelector(".hero, .gala-hero");
 
   // Header turns solid once the dark hero has scrolled past.
   function updateHeader() {
@@ -12,68 +11,28 @@
     var limit = hero ? hero.offsetHeight - 80 : 40;
     header.classList.toggle("is-solid", window.scrollY > limit);
   }
+  window.addEventListener("scroll", updateHeader, { passive: true });
+  window.addEventListener("resize", updateHeader);
+  updateHeader();
 
   // Mobile menu
   var toggle = document.querySelector(".menu-toggle");
   var nav = document.getElementById("site-nav");
+  function closeMenu() {
+    toggle.setAttribute("aria-expanded", "false");
+    nav.classList.remove("is-open");
+  }
   if (toggle && nav) {
     toggle.addEventListener("click", function () {
       var open = toggle.getAttribute("aria-expanded") === "true";
       toggle.setAttribute("aria-expanded", String(!open));
       nav.classList.toggle("is-open", !open);
     });
-    nav.addEventListener("click", function (e) {
-      if (e.target.closest("a")) {
-        toggle.setAttribute("aria-expanded", "false");
-        nav.classList.remove("is-open");
-      }
-    });
+    nav.addEventListener("click", function (e) { if (e.target.closest("a")) closeMenu(); });
     document.addEventListener("keydown", function (e) {
-      if (e.key === "Escape" && nav.classList.contains("is-open")) {
-        toggle.setAttribute("aria-expanded", "false");
-        nav.classList.remove("is-open");
-        toggle.focus();
-      }
+      if (e.key === "Escape" && nav.classList.contains("is-open")) { closeMenu(); toggle.focus(); }
     });
   }
-
-  // Reveal on scroll
-  var reveals = document.querySelectorAll(".reveal");
-  if (reduceMotion || !("IntersectionObserver" in window)) {
-    reveals.forEach(function (el) { el.classList.add("is-in"); });
-  } else {
-    var io = new IntersectionObserver(function (entries) {
-      entries.forEach(function (entry) {
-        if (entry.isIntersecting) {
-          entry.target.classList.add("is-in");
-          io.unobserve(entry.target);
-        }
-      });
-    }, { rootMargin: "0px 0px -8% 0px", threshold: 0.08 });
-    reveals.forEach(function (el) { io.observe(el); });
-  }
-
-  // Hero photos drift at different speeds as you scroll.
-  var floats = reduceMotion ? [] : Array.prototype.slice.call(document.querySelectorAll("[data-drift]"));
-  var ticking = false;
-  function drift() {
-    var y = window.scrollY;
-    floats.forEach(function (el) {
-      var speed = parseFloat(el.getAttribute("data-drift")) || 0;
-      el.style.transform = "translate3d(0," + (y * speed).toFixed(1) + "px,0)";
-    });
-    ticking = false;
-  }
-
-  window.addEventListener("scroll", function () {
-    updateHeader();
-    if (floats.length && !ticking) {
-      ticking = true;
-      window.requestAnimationFrame(drift);
-    }
-  }, { passive: true });
-  window.addEventListener("resize", updateHeader);
-  updateHeader();
 
   // Copy-to-clipboard buttons (sponsor email)
   document.querySelectorAll("[data-copy]").forEach(function (btn) {
@@ -91,6 +50,18 @@
       }
     });
   });
+
+  // Awards: expand or collapse every criteria list at once
+  var expandBtn = document.querySelector("[data-expand-all]");
+  if (expandBtn) {
+    var panels = document.querySelectorAll(".award__more");
+    expandBtn.addEventListener("click", function () {
+      var open = expandBtn.getAttribute("aria-pressed") !== "true";
+      panels.forEach(function (d) { d.open = open; });
+      expandBtn.setAttribute("aria-pressed", String(open));
+      expandBtn.textContent = open ? "Collapse all criteria" : "Expand all criteria";
+    });
+  }
 
   var year = document.querySelector("[data-year]");
   if (year) year.textContent = new Date().getFullYear();
