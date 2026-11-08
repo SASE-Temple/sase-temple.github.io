@@ -63,6 +63,29 @@
     });
   }
 
+  // Upcoming events: hide anything whose date has passed, and count down to deadlines.
+  var today = new Date();
+  today.setHours(0, 0, 0, 0);
+  function parseDay(str) {
+    var p = str.split("-");
+    return new Date(+p[0], +p[1] - 1, +p[2]);
+  }
+  var events = document.querySelectorAll(".event[data-date]");
+  if (events.length) {
+    var shown = 0;
+    events.forEach(function (ev) {
+      var past = parseDay(ev.getAttribute("data-date")) < today;
+      ev.hidden = past;
+      if (!past) shown++;
+    });
+    var empty = document.querySelector(".events__empty");
+    if (empty) empty.hidden = shown > 0;
+  }
+  document.querySelectorAll("[data-countdown]").forEach(function (el) {
+    var days = Math.round((parseDay(el.getAttribute("data-countdown")) - today) / 86400000);
+    el.textContent = days > 1 ? "(" + days + " days left)" : days === 1 ? "(tomorrow)" : days === 0 ? "(today)" : "";
+  });
+
   var year = document.querySelector("[data-year]");
   if (year) year.textContent = new Date().getFullYear();
 })();
