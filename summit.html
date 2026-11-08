@@ -4,12 +4,15 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>AAPI Awards Gala · SASE Summit at Temple</title>
-  <meta name="description" content="SASE Summit: AAPI Awards Gala. Friday, April 16, 2027 at the Temple Performing Arts Center. Nominate a student or a club by December 31, 2026.">
+  <meta name="description" content="SASE Summit: AAPI Awards Gala. Friday, April 16, 2027 at the Temple Performing Arts Center. See the 16 student and club awards and nominate someone by December 31, 2026.">
   <meta name="theme-color" content="#0d1236">
+  <meta property="og:title" content="AAPI Awards Gala · Temple SASE">
+  <meta property="og:description" content="Friday, April 16, 2027 at the Temple Performing Arts Center. Nominations close December 31, 2026.">
+  <meta property="og:image" content="assets/img/formal-group.jpg">
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Jost:wght@400;500&family=Noto+Serif+TC&family=Noto+Serif+KR&family=Noto+Serif+JP&family=Noto+Serif+Devanagari&family=Noto+Serif+Thai&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Jost:wght@400;500;600&family=Noto+Serif+TC&family=Noto+Serif+KR&family=Noto+Serif+JP&family=Noto+Serif+Devanagari&family=Noto+Serif+Thai&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="assets/css/styles.css">
 </head>
 <body>
@@ -26,169 +29,398 @@
         <span></span><span></span>
       </button>
       <nav class="nav" id="site-nav" aria-label="Main">
-        <a href="#about-gala">The Gala</a>
-        <a href="#nominate">Nominate</a>
+        <a href="#dates">Key dates</a>
+        <a href="#awards">Awards</a>
         <a href="#venue">Venue</a>
-        <a href="index.html">Chapter</a>
-        <a class="nav__cta" href="#nominate" aria-current="page"><span class="spark" aria-hidden="true"></span>Nominate</a>
+        <a href="index.html">Chapter home</a>
+        <a class="nav__cta" href="#nominate"><span class="spark" aria-hidden="true"></span>Nominate</a>
       </nav>
     </div>
   </header>
 
   <main id="main">
 
-    <!-- ==================== HERO ==================== -->
-    <section class="gala-hero" data-hero aria-labelledby="gala-title">
+    <!-- HERO -->
+    <section class="gala-hero" aria-labelledby="gala-title">
       <div class="gala-hero__bg" aria-hidden="true">
         <img src="assets/img/formal-group.jpg" alt="">
       </div>
       <div class="wrap">
-        <p class="eyebrow gala-hero__kicker"><span class="spark" aria-hidden="true"></span>SASE Summit <span class="cjk" lang="ko">&nbsp;·&nbsp; 시상식</span></p>
-        <h1 class="display gala-hero__title" id="gala-title">AAPI Awards <em>Gala</em></h1>
-        <div class="gala-hero__row">
-          <div><p class="eyebrow">Date</p><p>Friday,<br>April 16, 2027</p></div>
-          <div><p class="eyebrow">Venue</p><p>Temple Performing<br>Arts Center</p></div>
+        <p class="gala-hero__kicker"><span class="spark" aria-hidden="true"></span>SASE Summit <span class="cjk" lang="ko">시상식</span></p>
+        <h1 class="display gala-hero__title" id="gala-title">AAPI Awards Gala</h1>
+        <p class="gala-hero__sub">One night to honor the Temple students and clubs lifting up Asian American and Pacific Islander communities. Nominees come from you.</p>
+        <dl class="gala-hero__facts">
+          <div><dt>Date</dt><dd>Friday, April 16, 2027</dd></div>
+          <div><dt>Place</dt><dd>Temple Performing Arts Center</dd></div>
           <!-- TODO: add the start time once confirmed -->
-          <div><p class="eyebrow">Time</p><p><span class="tbd">TBD</span></p></div>
-          <a class="btn btn--solid" href="#nominate">Nominate <span class="arrow" aria-hidden="true">↓</span></a>
+          <div><dt>Time</dt><dd>To be announced</dd></div>
+        </dl>
+        <div class="gala-hero__actions">
+          <a class="btn btn--solid" href="#nominate">Nominate someone</a>
+          <a class="btn btn--ghost" href="#awards">See the 16 awards</a>
         </div>
       </div>
     </section>
 
-    <!-- ==================== ABOUT THE GALA ==================== -->
-    <section class="section" id="about-gala" aria-labelledby="about-gala-title">
+    <!-- KEY DATES -->
+    <section class="dates-band" id="dates" aria-labelledby="dates-title">
       <div class="wrap">
-        <div class="section__head reveal">
-          <h2 class="section-title" id="about-gala-title">The Gala <span class="slash">/</span> <span class="cjk" lang="ja">祝賀会</span></h2>
-          <span class="count">01</span>
+        <h2 class="visually-hidden" id="dates-title">Key dates</h2>
+        <ol class="timeline">
+          <li>
+            <time datetime="2026-12-31">Dec 31, 2026</time>
+            <strong>Nominations close</strong>
+            <span>Last day to nominate a student or a club.</span>
+          </li>
+          <li>
+            <time datetime="2027-04-01">Apr 1, 2027</time>
+            <strong>Finalists announced</strong>
+            <span>Posted on <a href="https://www.instagram.com/sasetemple/" target="_blank" rel="noopener">@sasetemple</a>.</span>
+          </li>
+          <li>
+            <time datetime="2027-04-16">Apr 16, 2027</time>
+            <strong>The gala</strong>
+            <span>Reception, then the awards ceremony. Start time coming soon.</span>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- AWARDS -->
+    <section class="section" id="awards" aria-labelledby="awards-title">
+      <div class="wrap">
+        <div class="section__head">
+          <h2 class="h2" id="awards-title">The awards <span class="cjk" lang="ja">賞</span></h2>
+          <div class="section__intro">
+            <p>There are 10 awards for students and 6 for clubs. Each one has a single eligibility requirement the nominee must meet, plus criteria the selection committee uses to compare nominees.</p>
+            <p>Every criterion lists the proof we’ll ask for, so gather it before you fill out the form. A nomination doesn’t need to meet every criterion, but the more you can back up, the stronger it is.</p>
+          </div>
         </div>
-        <div class="intro">
-          <p class="intro__text reveal">An evening to honor the <em>students</em> and <em>organizations</em> lifting up Asian American and Pacific Islander communities at Temple.</p>
-          <div class="intro__body reveal" data-delay="1">
-            <p>The AAPI Awards Gala is Temple SASE’s summit: one night at the Temple Performing Arts Center to recognize the people and clubs who lead, build and give back.</p>
-            <p>Nominees are put forward by the Temple community. If someone has made your time here better, this is the place to say so.</p>
+
+        <nav class="award-jump" aria-label="Award categories">
+          <a href="#student-awards">Student awards</a>
+          <a href="#club-awards">Club awards</a>
+          <button type="button" class="award-jump__toggle" data-expand-all aria-pressed="false">Expand all criteria</button>
+        </nav>
+
+        <div class="award-group" id="student-awards">
+          <h3 class="award-group__title">Student awards <span class="award-group__n">10</span></h3>
+          <div class="award-grid">
+          <article class="award" id="award-trailblazer">
+            <h4 class="award__name">Trailblazer</h4>
+            <p class="award__desc">For an AAPI student excelling in a field where AAPI people have historically been rare.</p>
+            <p class="award__req"><strong>To be eligible:</strong> Holds an active role or roster spot in a field where AAPI people make up less than 15%.</p>
+            <details class="award__more">
+              <summary>What the committee looks for <span class="award__count">4 criteria</span></summary>
+              <ul class="criteria">
+                <li><strong>Longevity.</strong> Took part for at least 2 consecutive seasons, production runs or terms. <span class="proof">Proof: Official roster, playbill or appointment record</span></li>
+                <li><strong>Leading role.</strong> Held a primary leading position. <span class="proof">Proof: Performance credits, TSG cabinet listing or published articles</span></li>
+                <li><strong>Outside recognition.</strong> Received an official athletic or conference honor, an artistic award, or a regional media feature. <span class="proof">Proof: News link or award certificate</span></li>
+                <li><strong>Historic first.</strong> The first, or one of fewer than 3 documented AAPI people, to hold this title or win this honor at Temple. <span class="proof">Proof: Departmental verification or historical record</span></li>
+              </ul>
+            </details>
+          </article>
+          <article class="award" id="award-cultural-ambassador">
+            <h4 class="award__name">Cultural Ambassador</h4>
+            <p class="award__desc">For a student who teaches others about heritage and cultural connection.</p>
+            <p class="award__req"><strong>To be eligible:</strong> Directly organized cultural or heritage programming this academic year.</p>
+            <details class="award__more">
+              <summary>What the committee looks for <span class="award__count">4 criteria</span></summary>
+              <ul class="criteria">
+                <li><strong>Sustained programming.</strong> Organized multiple cultural events across 2 or more semesters. <span class="proof">Proof: Event dates or flyers</span></li>
+                <li><strong>Educational content.</strong> Created structured educational programming, like a panel on cultural history, an identity or diaspora workshop, or a guest speaker. <span class="proof">Proof: Slide deck, recording or program guide</span></li>
+                <li><strong>Fundraising.</strong> Raised money for a cultural cause, charity or heritage initiative. <span class="proof">Proof: Check, invoice or emails</span></li>
+                <li><strong>Reach.</strong> Led a cultural event with more than 50 attendees. <span class="proof">Proof: Proxy proof, like a sign-in sheet or event photos</span></li>
+              </ul>
+            </details>
+          </article>
+          <article class="award" id="award-research">
+            <h4 class="award__name">Research</h4>
+            <p class="award__desc">For high-level academic research with a peer-reviewed publication.</p>
+            <p class="award__req"><strong>To be eligible:</strong> Has been part of a lab for at least 2 semesters. <span class="proof">Proof: Email from your PI</span></p>
+            <details class="award__more">
+              <summary>What the committee looks for <span class="award__count">5 criteria</span></summary>
+              <ul class="criteria">
+                <li><strong>First author.</strong> Listed as first author on a paper in an indexed, peer-reviewed journal or IEEE/ACM conference proceeding. <span class="proof">Proof: The publication</span></li>
+                <li><strong>Co-author.</strong> Listed as a contributing co-author on an indexed, peer-reviewed paper. <span class="proof">Proof: The publication</span></li>
+                <li><strong>Presentation.</strong> Gave an oral or poster presentation at a university, regional or national symposium or conference. <span class="proof">Proof: Poster or presentation document</span></li>
+                <li><strong>Research funding.</strong> Won a competitive research fellowship or grant, like CARAS, Diamond Research Scholars, MARC or NSF REU. <span class="proof">Proof: Award letter</span></li>
+                <li><strong>Academic standing.</strong> Cumulative GPA of 3.6 or higher. <span class="proof">Proof: Transcript</span></li>
+              </ul>
+            </details>
+          </article>
+          <article class="award" id="award-emerging-leader">
+            <h4 class="award__name">Emerging Leader</h4>
+            <p class="award__desc">For a freshman or sophomore already taking initiative in their community.</p>
+            <p class="award__req"><strong>To be eligible:</strong> Is a first- or second-year undergraduate.</p>
+            <details class="award__more">
+              <summary>What the committee looks for <span class="award__count">3 criteria</span></summary>
+              <ul class="criteria">
+                <li><strong>Official role.</strong> Holds an e-board seat, committee head or project director title in a student org or department. <span class="proof">Proof: Suitable listing or Instagram board post</span></li>
+                <li><strong>New initiative.</strong> Started and ran a new program, event or initiative that reached more than 20 students. <span class="proof">Proof: Proxy proof, like a sign-in sheet or event photos</span></li>
+                <li><strong>Balance.</strong> Holds an active leadership role with a cumulative GPA of 3.6 or higher. <span class="proof">Proof: Transcript</span></li>
+              </ul>
+            </details>
+          </article>
+          <article class="award" id="award-leadership">
+            <h4 class="award__name">Leadership</h4>
+            <p class="award__desc">For a junior or senior who gives an organization direction and helps it grow.</p>
+            <p class="award__req"><strong>To be eligible:</strong> Is a third-, fourth- or fifth-year undergraduate.</p>
+            <details class="award__more">
+              <summary>What the committee looks for <span class="award__count">5 criteria</span></summary>
+              <ul class="criteria">
+                <li><strong>Official role.</strong> Holds an e-board seat, committee head or project director title in a student org or department. <span class="proof">Proof: Suitable listing or Instagram board post</span></li>
+                <li><strong>Team size.</strong> Led a team of more than 5 people. </li>
+                <li><strong>Event scale.</strong> Led a major campus event with 75 or more attendees. <span class="proof">Proof: Proxy proof, like a sign-in sheet or event photos</span></li>
+                <li><strong>Track record.</strong> Moved up in leadership for at least 3 semesters in a row, for example committee member, then chair, then president. <span class="proof">Proof: Instagram board posts</span></li>
+                <li><strong>Measurable growth.</strong> Grew an organization by a clear margin, like raising $300, adding 15 active members or increasing attendance by 25%. <span class="proof">Proof: Attendance comparison, budget sheet or Instagram analytics</span></li>
+              </ul>
+            </details>
+          </article>
+          <article class="award" id="award-first-generation-student">
+            <h4 class="award__name">First Generation Student</h4>
+            <p class="award__desc">For a first-gen student reaching strong academic and professional milestones.</p>
+            <p class="award__req"><strong>To be eligible:</strong> Neither parent or guardian completed a four-year bachelor’s degree in the United States.</p>
+            <details class="award__more">
+              <summary>What the committee looks for <span class="award__count">5 criteria</span></summary>
+              <ul class="criteria">
+                <li><strong>GPA.</strong> Cumulative GPA above 3.5. <span class="proof">Proof: Transcript</span></li>
+                <li><strong>Working student.</strong> Works a part-time job while enrolled full time. <span class="proof">Proof: Paystub or supervisor letter</span></li>
+                <li><strong>Doing more.</strong> Also holds an e-board seat, a lab research position or a competitive internship. <span class="proof">Proof: Roster or offer letter</span></li>
+                <li><strong>Dean’s List.</strong> On the Dean’s List for at least 2 semesters. <span class="proof">Proof: Transcript</span></li>
+                <li><strong>Industry placement.</strong> Accepted a competitive internship, co-op or full-time offer at a Fortune 500 company, Big Tech, a top financial institution, a national lab or an established engineering firm. <span class="proof">Proof: Offer letter</span></li>
+              </ul>
+            </details>
+          </article>
+          <article class="award" id="award-business-and-tech">
+            <h4 class="award__name">Business and Tech</h4>
+            <p class="award__desc">For real results in entrepreneurship, technology, corporate finance or software engineering.</p>
+            <p class="award__req"><strong>To be eligible:</strong> Main project or career focus is business, economics, technology, computer science or engineering.</p>
+            <details class="award__more">
+              <summary>What the committee looks for <span class="award__count">4 criteria</span></summary>
+              <ul class="criteria">
+                <li><strong>Built something.</strong> Built and launched a working technical product. <span class="proof">Proof: Live URL, GitHub repo, sales statement or demo</span></li>
+                <li><strong>Competition.</strong> Placed 1st, 2nd or 3rd in a hackathon, case competition, startup incubator or other technical competition. <span class="proof">Proof: Award certificate or press release</span></li>
+                <li><strong>Industry role.</strong> Completed or accepted a competitive internship or position at an established or high-growth company. <span class="proof">Proof: Offer letter</span></li>
+                <li><strong>Career org leadership.</strong> Holds a leadership position in a career-related student society. <span class="proof">Proof: Roster</span></li>
+              </ul>
+            </details>
+          </article>
+          <article class="award" id="award-arts">
+            <h4 class="award__name">Arts</h4>
+            <p class="award__desc">For excellence in visual art, media, architecture, music, film or performance.</p>
+            <p class="award__req"><strong>To be eligible:</strong> Majoring in or actively pursuing visual, performing, media or architectural arts, with a public portfolio.</p>
+            <details class="award__more">
+              <summary>What the committee looks for <span class="award__count">5 criteria</span></summary>
+              <ul class="criteria">
+                <li><strong>Juried selection.</strong> Work selected for a juried or official exhibition, like a gallery show, film festival screening, or mainstage orchestra or theater production. <span class="proof">Proof: Exhibition catalog, festival program, playbill or acceptance letter</span></li>
+                <li><strong>Published work.</strong> Work published in an outside media outlet, architecture journal or literary review, or officially released (for example on Spotify or with an IMDb credit). <span class="proof">Proof: Live link or publication scan</span></li>
+                <li><strong>Paid work.</strong> Completed contracted creative, architectural or design work for paying clients or university departments. <span class="proof">Proof: Invoices, or proof of the request and payment</span></li>
+                <li><strong>Awards.</strong> Won a juried award, artistic grant or competition placement. <span class="proof">Proof: Award certificate</span></li>
+                <li><strong>Portfolio.</strong> Keeps a public portfolio with at least 5 finished works from the past 12 months. <span class="proof">Proof: Website or portfolio link</span></li>
+              </ul>
+            </details>
+          </article>
+          <article class="award" id="award-social-sciences">
+            <h4 class="award__name">Social Sciences</h4>
+            <p class="award__desc">For measurable results in policy, human behavior, civic justice or education advocacy.</p>
+            <p class="award__req"><strong>To be eligible:</strong> Academic or community focus in social sciences, education, legal studies or public policy.</p>
+            <details class="award__more">
+              <summary>What the committee looks for <span class="award__count">3 criteria</span></summary>
+              <ul class="criteria">
+                <li><strong>Policy impact.</strong> Wrote or co-wrote a policy brief, draft legislation or institutional report that a government body, school board or university administration formally adopted or reviewed. <span class="proof">Proof: Copy of the document or legislative record</span></li>
+                <li><strong>Civic action.</strong> Organized a civic initiative, like a voter drive, labor campaign or mutual aid effort. <span class="proof">Proof: Roster, campaign logs or press coverage</span></li>
+                <li><strong>Research.</strong> Presented a social science capstone or thesis at an academic conference or symposium. <span class="proof">Proof: Program schedule listing</span></li>
+              </ul>
+            </details>
+          </article>
+          <article class="award" id="award-health-sciences">
+            <h4 class="award__name">Health Sciences</h4>
+            <p class="award__desc">For real impact in clinical care, health equity or medical education.</p>
+            <p class="award__req"><strong>To be eligible:</strong> Enrolled in a pre-health or health science program (CPH, CST Pre-Health, Pharmacy or Nursing).</p>
+            <details class="award__more">
+              <summary>What the committee looks for <span class="award__count">5 criteria</span></summary>
+              <ul class="criteria">
+                <li><strong>Patient care.</strong> Documented clinical experience with direct patient interaction or observation, such as EMT, CNA, medical assistant, scribe, hospice or verified physician shadowing. <span class="proof">Proof: Work log, timesheet or paystub</span></li>
+                <li><strong>Service.</strong> Significant volunteer or community service hours in underserved communities. <span class="proof">Proof: Signed volunteer hours</span></li>
+                <li><strong>Research.</strong> Took part in laboratory, clinical or health sciences research. <span class="proof">Proof: Peer-reviewed publication, accepted abstract or symposium presentation</span></li>
+                <li><strong>Program admission.</strong> Verified offer to a graduate or professional health program (MD/DO, DMD/DDS, PharmD, PA, DPT, MSN, MPH or PhD). <span class="proof">Proof: Offer letter</span></li>
+                <li><strong>Exam scores.</strong> Scored in the 85th percentile or higher on the MCAT, DAT, OAT or GRE. <span class="proof">Proof: Score report</span></li>
+              </ul>
+            </details>
+          </article>
+          </div>
+        </div>
+        <div class="award-group" id="club-awards">
+          <h3 class="award-group__title">Club awards <span class="award-group__n">6</span></h3>
+          <div class="award-grid">
+          <article class="award" id="award-most-philanthropic">
+            <h4 class="award__name">Most Philanthropic</h4>
+            <p class="award__desc">For a club committed to community service, civic engagement and fundraising for causes beyond its own budget.</p>
+            <p class="award__req"><strong>To be eligible:</strong> Completed at least one philanthropic initiative, charity fundraiser or group service project this academic year. <span class="proof">Proof: Event flyer, project recap or donation receipt</span></p>
+            <details class="award__more">
+              <summary>What the committee looks for <span class="award__count">5 criteria</span></summary>
+              <ul class="criteria">
+                <li><strong>Major donation.</strong> Raised and donated $500 or more to a nonprofit, disaster relief fund or community charity. <span class="proof">Proof: Donation receipt or tax acknowledgement letter</span></li>
+                <li><strong>Donation.</strong> Raised and donated $150 to $499 to a charitable cause. <span class="proof">Proof: Donation receipt or tax acknowledgement letter</span></li>
+                <li><strong>Group volunteering.</strong> Volunteered as a club in the local community, like at a soup kitchen, community garden or park cleanup. <span class="proof">Proof: Volunteer coordinator letter, signed timesheet or attendance sheet</span></li>
+                <li><strong>Community partnership.</strong> Set up a formal, ongoing volunteer relationship with an outside civic or nonprofit organization. <span class="proof">Proof: Partnership agreement, co-hosted project flyer or coordinator email</span></li>
+                <li><strong>Goods drive.</strong> Ran a drive that collected at least 50 items, like canned food, winter clothes, hygiene kits or school supplies. <span class="proof">Proof: Drop-off receipt, inventory tally or handoff photo</span></li>
+              </ul>
+            </details>
+          </article>
+          <article class="award" id="award-club-of-the-year">
+            <h4 class="award__name">Club of the Year</h4>
+            <p class="award__desc">For a club showing excellence in every part of campus life.</p>
+            <p class="award__req"><strong>To be eligible:</strong> Is a Registered Student Organization at Temple in good standing with Student Activities (not frozen or on probation). <span class="proof">Proof: Suitable listing</span></p>
+            <details class="award__more">
+              <summary>What the committee looks for <span class="award__count">6 criteria</span></summary>
+              <ul class="criteria">
+                <li><strong>Consistency.</strong> Hosted at least 6 separate meetings or events over the school year. <span class="proof">Proof: Dated flyers, event logs or Instagram post history</span></li>
+                <li><strong>Range.</strong> Hosted events in at least 2 categories: professional or academic, cultural, social, or community. <span class="proof">Proof: Dated flyers, event logs or Instagram post history</span></li>
+                <li><strong>Collaboration.</strong> Co-planned and co-hosted at least 2 events with other student orgs or university departments this year. <span class="proof">Proof: Dated flyers, event logs or Instagram post history</span></li>
+                <li><strong>Flagship event.</strong> Ran at least one major signature event for campus, like an annual banquet, conference, tournament, showcase or festival. <span class="proof">Proof: Proxy proof, like a sign-in sheet or event photos</span></li>
+                <li><strong>Turnout.</strong> Kept steady attendance (for example 30 or more students) across multiple meetings. <span class="proof">Proof: Proxy proof, like a sign-in sheet or event photos</span></li>
+                <li><strong>Self-funding.</strong> Raised $500 or more on its own through fundraising, merch, sponsors or alumni gifts. <span class="proof">Proof: Budget sheets, transaction history, check or invoice</span></li>
+              </ul>
+            </details>
+          </article>
+          <article class="award" id="award-best-new-club">
+            <h4 class="award__name">Best New Club</h4>
+            <p class="award__desc">For a club founded in the last 1 to 2 years that has grown fast, built an active community and made a real contribution to campus.</p>
+            <p class="award__req"><strong>To be eligible:</strong> Chartered, registered or reactivated with Temple Student Activities in Fall 2024 or later. <span class="proof">Proof: Suitable listing or approval email</span></p>
+            <details class="award__more">
+              <summary>What the committee looks for <span class="award__count">4 criteria</span></summary>
+              <ul class="criteria">
+                <li><strong>Membership.</strong> Has 25 or more active members in its first or second year. <span class="proof">Proof: Proxy proof or membership fee records</span></li>
+                <li><strong>Track record.</strong> Ran at least 3 standalone events or general body meetings this academic year. <span class="proof">Proof: Event flyers, room confirmations or Instagram post history</span></li>
+                <li><strong>Unmet need.</strong> Serves an identity, field or interest that wasn’t served on campus before. <span class="proof">Proof: A one-paragraph mission statement and a sample event or workshop plan</span></li>
+                <li><strong>Cross-club event.</strong> Co-hosted an event with an established student organization. <span class="proof">Proof: Co-branded flyer or joint event listing</span></li>
+              </ul>
+            </details>
+          </article>
+          <article class="award" id="award-most-improved-club">
+            <h4 class="award__name">Most Improved Club</h4>
+            <p class="award__desc">For a club that has turned itself around or changed significantly for the better.</p>
+            <p class="award__req"><strong>To be eligible:</strong> Founded at least 2 years ago, and active both last year and this year. <span class="proof">Proof: Suitable listing or Instagram</span></p>
+            <details class="award__more">
+              <summary>What the committee looks for <span class="award__count">3 criteria</span></summary>
+              <ul class="criteria">
+                <li><strong>Membership growth.</strong> Grew active membership, meeting attendance or online community size compared with last year. <span class="proof">Proof: Proxy proof, membership fee records or Instagram analytics</span></li>
+                <li><strong>More programming.</strong> Increased the number or scope of events by at least 50% compared with last year. <span class="proof">Proof: Last year’s and this year’s event calendars, or Instagram</span></li>
+                <li><strong>Financial improvement.</strong> Has more money than last year, from fundraisers, sponsors or other sources. <span class="proof">Proof: Budget sheets, transaction history, check or invoice</span></li>
+              </ul>
+            </details>
+          </article>
+          <article class="award" id="award-advocacy-and-social-justice">
+            <h4 class="award__name">Advocacy and Social Justice</h4>
+            <p class="award__desc">For a club leading on civil rights, equity, policy reform, cultural education or mental health awareness.</p>
+            <p class="award__req"><strong>To be eligible:</strong> Organized, led or sponsored at least one campus initiative, workshop or campaign centered on social justice, civil rights, identity equity or systemic awareness this year. <span class="proof">Proof: Event flyer, educational deck or public statement</span></p>
+            <details class="award__more">
+              <summary>What the committee looks for <span class="award__count">4 criteria</span></summary>
+              <ul class="criteria">
+                <li><strong>Policy action.</strong> Wrote, sponsored or rallied support for a campus policy proposal, TSG resolution or open letter to the administration on equity, cultural resources or safety. <span class="proof">Proof: Copy of the resolution, bill number or official letter</span></li>
+                <li><strong>Education.</strong> Ran a workshop, panel or teach-in on systemic issues, like AAPI history, anti-Asian racism, mental health stigma or intersectionality. <span class="proof">Proof: Slide deck, speaker bio or program guide</span></li>
+                <li><strong>Public conversation.</strong> Produced an op-ed, awareness campaign or media feature that shaped public conversation, for example in The Temple News, a university newsletter or campus radio. <span class="proof">Proof: Published link or scan</span></li>
+                <li><strong>Media campaign.</strong> Made social media or print content raising awareness of systemic issues. <span class="proof">Proof: Social posts, newsletter or print scans</span></li>
+              </ul>
+            </details>
+          </article>
+          <article class="award" id="award-professionalism">
+            <h4 class="award__name">Professionalism</h4>
+            <p class="award__desc">For a club dedicated to career prep, industry readiness and mentorship, whose members land competitive opportunities.</p>
+            <p class="award__req"><strong>To be eligible:</strong> Hosted at least one professional event, corporate info session or career workshop this academic year. <span class="proof">Proof: Event flyers, Instagram history or event description</span></p>
+            <details class="award__more">
+              <summary>What the committee looks for <span class="award__count">5 criteria</span></summary>
+              <ul class="criteria">
+                <li><strong>Recruiter access.</strong> Hosted an info session, networking event or site visit with outside recruiters or industry professionals. <span class="proof">Proof: Co-branded flyer, emails with the speaker or event photos</span></li>
+                <li><strong>Skill-building.</strong> Ran at least one hands-on career development workshop. <span class="proof">Proof: Event flyer, emails with the speaker or event photos</span></li>
+                <li><strong>Industry placement.</strong> A significant number of members or e-board accepted competitive internships, co-ops or full-time offers at Fortune 500 companies, Big Tech, top financial institutions, national labs or established engineering firms for the coming year. <span class="proof">Proof: Redacted offer letters or LinkedIn announcements</span></li>
+                <li><strong>Grad school.</strong> A significant number of members or e-board got offers from graduate or professional programs (master’s, PhD, medical, dental or law). <span class="proof">Proof: Redacted offer letters or LinkedIn announcements</span></li>
+                <li><strong>E-board academics.</strong> A significant number of e-board members are on the Dean’s List or have a cumulative GPA above 3.5. <span class="proof">Proof: Transcripts or Dean’s List emails</span></li>
+              </ul>
+            </details>
+          </article>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- ==================== NOMINATE ==================== -->
+    <!-- NOMINATE -->
     <section class="section section--paper" id="nominate" aria-labelledby="nominate-title">
       <div class="wrap">
-        <div class="section__head reveal">
-          <h2 class="section-title" id="nominate-title">Nominate <span class="slash">/</span> <span class="cjk" lang="vi">Đề cử</span></h2>
-          <span class="count">02</span>
+        <div class="section__head">
+          <h2 class="h2" id="nominate-title">Nominate someone <span class="cjk" lang="vi">Đề cử</span></h2>
+          <p class="section__intro">Nominations close December 31, 2026. Each form takes a few minutes. Have the award name and your proof (links, screenshots or documents) ready.</p>
         </div>
-        <p class="eyebrow reveal" style="margin:-32px 0 32px"><span class="spark" aria-hidden="true"></span>&nbsp; Nominations close December 31, 2026</p>
         <div class="nominate">
-          <a class="nom-card nom-card--cherry reveal" href="https://forms.gle/zGwrtAh7cPeC5Cx79" target="_blank" rel="noopener">
-            <div>
-              <p class="eyebrow">For individuals</p>
-              <h3>Nominate a <em>student</em></h3>
-              <p>Recognize a Temple student whose leadership, research or service has made a difference.</p>
-            </div>
-            <div class="nom-card__foot">
-              <span class="eyebrow">Google Form · opens in a new tab</span>
-              <span class="nom-card__arrow" aria-hidden="true">↗</span>
-            </div>
+          <a class="nom-card nom-card--cherry" href="https://forms.gle/zGwrtAh7cPeC5Cx79" target="_blank" rel="noopener">
+            <h3>Nominate a student</h3>
+            <p>For any of the 10 student awards, from Trailblazer to Health Sciences.</p>
+            <span class="nom-card__go">Open the student form ↗</span>
           </a>
-          <a class="nom-card nom-card--navy reveal" data-delay="1" href="https://forms.gle/AzSv1RMtpjcy8vsPA" target="_blank" rel="noopener">
-            <div>
-              <p class="eyebrow">For organizations</p>
-              <h3>Nominate a <em>club</em></h3>
-              <p>Recognize a student organization that has built community and created opportunities this year.</p>
-            </div>
-            <div class="nom-card__foot">
-              <span class="eyebrow">Google Form · opens in a new tab</span>
-              <span class="nom-card__arrow" aria-hidden="true">↗</span>
-            </div>
+          <a class="nom-card nom-card--navy" href="https://forms.gle/AzSv1RMtpjcy8vsPA" target="_blank" rel="noopener">
+            <h3>Nominate a club</h3>
+            <p>For any of the 6 club awards, from Best New Club to Club of the Year.</p>
+            <span class="nom-card__go">Open the club form ↗</span>
           </a>
         </div>
+        <p class="nominate__help">Not sure which award fits, or have a question? Email <a href="mailto:temple@saseconnect.org?subject=AAPI%20Awards%20Gala">temple@saseconnect.org</a> or ask in our <a href="https://discord.gg/sXgfzkeyc9" target="_blank" rel="noopener">Discord</a>.</p>
       </div>
     </section>
 
-    <!-- ==================== EVENING ==================== -->
-    <section class="section" aria-labelledby="program-title">
-      <div class="wrap">
-        <div class="section__head reveal">
-          <h2 class="section-title" id="program-title">The Evening <span class="slash">/</span> <span class="cjk" lang="zh-Hant">節目</span></h2>
-          <span class="count">03</span>
-        </div>
-        <!-- TODO: fill in times and details as the program is confirmed -->
-        <div class="reveal" style="overflow-x:auto">
-          <table class="program">
-            <thead><tr><th scope="col">When</th><th scope="col">What</th><th scope="col">Details</th></tr></thead>
-            <tbody>
-              <tr><td>Dec 31, 2026</td><td>Nominations close</td><td>Last day to submit student and club nominations</td></tr>
-              <tr><td>April 1, 2027</td><td>Finalists announced</td><td>Shared on <a href="https://www.instagram.com/sasetemple/" target="_blank" rel="noopener">@sasetemple</a></td></tr>
-              <tr><td>April 16, 2027</td><td>Doors &amp; reception</td><td>Temple Performing Arts Center · time TBD</td></tr>
-              <tr><td>April 16, 2027</td><td>Awards ceremony</td><td>Student and club awards</td></tr>
-            </tbody>
-          </table>
-        </div>
-      </div>
-    </section>
-
-    <!-- ==================== VENUE ==================== -->
+    <!-- VENUE -->
     <section class="section section--cherry" id="venue" aria-labelledby="venue-title">
-      <div class="wrap">
-        <div class="venue">
-          <div class="reveal">
-            <p class="eyebrow">Venue <span class="cjk" lang="th">&nbsp;·&nbsp; สถานที่</span></p>
-            <h2 class="display venue__name" id="venue-title">Temple Performing Arts <em>Center</em></h2>
-            <address>1837 N Broad St<br>Philadelphia, PA 19122</address>
-            <a class="btn btn--ghost" href="https://www.google.com/maps/search/?api=1&query=Temple+Performing+Arts+Center+Philadelphia" target="_blank" rel="noopener">Open in Maps <span class="arrow" aria-hidden="true">↗</span></a>
-          </div>
-          <div class="venue__card reveal" data-delay="1" aria-hidden="true">
-            <div>
-              <p class="display">16</p>
-              <p class="eyebrow">April · 2027</p>
-            </div>
-          </div>
+      <div class="wrap venue">
+        <div>
+          <h2 class="h2" id="venue-title">Temple Performing Arts Center <span class="cjk" lang="th">สถานที่</span></h2>
+          <address>1837 N Broad St<br>Philadelphia, PA 19122</address>
+          <p>On Main Campus, a few blocks from the Cecil B. Moore stop on the Broad Street Line.</p>
+          <a class="btn btn--ghost" href="https://www.google.com/maps/search/?api=1&amp;query=Temple+Performing+Arts+Center+Philadelphia" target="_blank" rel="noopener">Open in Maps ↗</a>
         </div>
+        <iframe class="venue__map" title="Map of the Temple Performing Arts Center" src="https://www.google.com/maps?q=Temple+Performing+Arts+Center,+1837+N+Broad+St,+Philadelphia,+PA+19122&amp;output=embed" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
       </div>
     </section>
 
   </main>
 
   <footer class="site-footer">
-    <div class="wrap">
-      <p class="footer__big">See you <em>there</em></p>
-      <div class="footer__grid">
-        <div>
-          <img src="assets/img/national-logo_horizontal_solid_light.png" alt="SASE" width="1000" height="215">
-          <p>Hosted by the Society of Asian Scientists &amp; Engineers, Temple University chapter.</p>
-        </div>
-        <div>
-          <h3>Gala</h3>
-          <ul>
-            <li><a href="#about-gala">The Gala</a></li>
-            <li><a href="#nominate">Nominate</a></li>
-            <li><a href="#venue">Venue</a></li>
-          </ul>
-        </div>
-        <div>
-          <h3>Chapter</h3>
-          <ul>
-            <li><a href="index.html#about">About</a></li>
-            <li><a href="index.html#eboard">E-board</a></li>
-            <li><a href="index.html#sponsors">Sponsors</a></li>
-          </ul>
-        </div>
-        <div>
-          <h3>Connect</h3>
-          <ul>
-            <li><a href="https://www.instagram.com/sasetemple/" target="_blank" rel="noopener">Instagram ↗</a></li>
-            <li><a href="https://discord.gg/sXgfzkeyc9" target="_blank" rel="noopener">Discord ↗</a></li>
-            <li><a href="https://app.suitable.co/student-organizations/rLonS6oS8V3z?tab=profile" target="_blank" rel="noopener">Suitable ↗</a></li>
-            <li><a href="mailto:temple@saseconnect.org">temple@saseconnect.org</a></li>
-          </ul>
-        </div>
+    <div class="wrap footer__grid">
+      <div>
+        <img src="assets/img/national-logo_horizontal_solid_light.png" alt="SASE" width="1000" height="215">
+        <p>The AAPI Awards Gala is hosted by the Society of Asian Scientists &amp; Engineers, Temple University chapter.</p>
       </div>
-      <div class="footer__base">
-        <span>© <span data-year>2026</span> Temple SASE</span>
-        <a href="https://www.saseconnect.org" target="_blank" rel="noopener">SASE National ↗</a>
+      <div>
+        <h3>Gala</h3>
+        <ul>
+          <li><a href="#dates">Key dates</a></li>
+          <li><a href="#awards">The awards</a></li>
+          <li><a href="#nominate">Nominate</a></li>
+          <li><a href="#venue">Venue</a></li>
+        </ul>
       </div>
+      <div>
+        <h3>Chapter</h3>
+        <ul>
+          <li><a href="index.html#what-we-do">What we do</a></li>
+          <li><a href="index.html#join">Join us</a></li>
+          <li><a href="index.html#eboard">E-board</a></li>
+          <li><a href="index.html#sponsor">Sponsor</a></li>
+        </ul>
+      </div>
+      <div>
+        <h3>Find us</h3>
+        <ul>
+          <li><a href="https://discord.gg/sXgfzkeyc9" target="_blank" rel="noopener">Discord ↗</a></li>
+          <li><a href="https://www.instagram.com/sasetemple/" target="_blank" rel="noopener">Instagram ↗</a></li>
+          <li><a href="https://groupme.com/join_group/100924297/vODMyRft" target="_blank" rel="noopener">GroupMe ↗</a></li>
+          <li><a href="mailto:temple@saseconnect.org">temple@<wbr>saseconnect.org</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="wrap footer__base">
+      <span>© <span data-year>2026</span> Temple SASE</span>
+      <a href="https://www.saseconnect.org" target="_blank" rel="noopener">SASE National ↗</a>
     </div>
   </footer>
 
