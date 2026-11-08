@@ -29,6 +29,7 @@
         <span></span><span></span>
       </button>
       <nav class="nav" id="site-nav" aria-label="Main">
+        <a href="#events">Events</a>
         <a href="#what-we-do">What we do</a>
         <a href="#join">Join us</a>
         <a href="#faq">FAQ</a>
@@ -63,14 +64,80 @@
         </div>
         <figure class="hero__photo">
           <img src="assets/img/welcome-gbm.jpg" alt="A packed room of Temple SASE members at a fall social mixer" width="1800" height="1068">
+          <figcaption>Our fall social mixer, where most new members meet us for the first time.</figcaption>
         </figure>
       </div>
+    </section>
 
-      <a class="hero__notice wrap" href="summit.html">
-        <span class="spark" aria-hidden="true"></span>
-        <span><strong>AAPI Awards Gala</strong> is on Friday, April 16, 2027. Nominate a student or club by December 31.</span>
-        <span class="hero__notice-link">Gala details</span>
-      </a>
+    <!-- UPCOMING EVENTS -->
+    <section class="section events-section" id="events" aria-labelledby="events-title">
+      <div class="wrap">
+        <div class="section__head">
+          <h2 class="h2" id="events-title">Upcoming events <span class="cjk" lang="ko">다가오는 행사</span></h2>
+          <p class="section__intro">General body meetings, socials and workshops are posted first in our <a href="https://discord.gg/sXgfzkeyc9" target="_blank" rel="noopener">Discord</a> and on <a href="https://www.instagram.com/sasetemple/" target="_blank" rel="noopener">Instagram</a>. Here’s what’s coming up.</p>
+        </div>
+
+        <div class="events">
+          <!-- Featured event. Swap this out for next year's gala or another big event. -->
+          <a class="feature" href="summit.html">
+            <figure class="feature__photo">
+              <img src="assets/img/formal-group.jpg" alt="Temple SASE members dressed up in suits on a staircase" loading="lazy" width="1200" height="1800">
+            </figure>
+            <div class="feature__body">
+              <p class="feature__kicker"><span class="spark" aria-hidden="true"></span>Our biggest night of the year</p>
+              <h3 class="feature__title">AAPI Awards Gala</h3>
+              <p class="feature__desc">A formal night honoring Temple students and clubs who lift up Asian American and Pacific Islander communities. Dress up, bring friends, and nominate someone who deserves it.</p>
+              <dl class="feature__facts">
+                <div><dt>When</dt><dd>Friday, April 16, 2027</dd></div>
+                <div><dt>Where</dt><dd>Temple Performing Arts Center</dd></div>
+                <div><dt>Nominations close</dt><dd>December 31, 2026 <span class="feature__countdown" data-countdown="2026-12-31"></span></dd></div>
+              </dl>
+              <span class="btn btn--solid feature__cta">See the awards and nominate</span>
+            </div>
+          </a>
+
+          <!--
+            Event list. Add one <li> per event, soonest first. Each event hides itself
+            automatically the day after its data-date, so old events never linger.
+            Copy this template:
+
+            <li class="event" data-date="2026-11-20">
+              <time datetime="2026-11-20"><span>Nov</span> 20</time>
+              <div>
+                <h3>Event name</h3>
+                <p>Thursday, 6 to 8 pm, in Room 101 of Building Name</p>
+              </div>
+            </li>
+          -->
+          <div class="event-list">
+            <ol class="events__list">
+              <li class="event" data-date="2026-12-31">
+                <time datetime="2026-12-31"><span>Dec</span> 31</time>
+                <div>
+                  <h3>Gala nominations close</h3>
+                  <p>Last day to nominate a student or club. <a href="summit.html#nominate">Nominate</a></p>
+                </div>
+              </li>
+              <li class="event" data-date="2027-04-01">
+                <time datetime="2027-04-01"><span>Apr</span> 1</time>
+                <div>
+                  <h3>Gala finalists announced</h3>
+                  <p>Posted on <a href="https://www.instagram.com/sasetemple/" target="_blank" rel="noopener">@sasetemple</a>.</p>
+                </div>
+              </li>
+              <li class="event" data-date="2027-04-16">
+                <time datetime="2027-04-16"><span>Apr</span> 16</time>
+                <div>
+                  <h3>AAPI Awards Gala</h3>
+                  <p>Temple Performing Arts Center. <a href="summit.html">Details</a></p>
+                </div>
+              </li>
+            </ol>
+            <p class="events__empty" hidden>Nothing on the calendar right now. Check the Discord for the next meeting.</p>
+            <a class="events__more" href="https://discord.gg/sXgfzkeyc9" target="_blank" rel="noopener">See every event in our Discord ↗</a>
+          </div>
+        </div>
+      </div>
     </section>
 
     <!-- WHAT WE DO -->
@@ -90,12 +157,12 @@
           <article class="pillar">
             <figure class="pillar__photo"><img src="assets/img/cherry-blossoms.jpg" alt="Members together at the Philadelphia Cherry Blossom Festival" loading="lazy" width="1800" height="1200"></figure>
             <h3>Cultural awareness</h3>
-            <p>Cultural celebrations, potlucks with other Asian student groups, and events that make room for every part of the Asian diaspora. You don’t need to be Asian to come.</p>
+            <p>Every spring we head to Philadelphia’s Cherry Blossom Festival together. During the year we hold cultural celebrations and potlucks with other Asian student groups. You don’t need to be Asian to come.</p>
           </article>
           <article class="pillar">
-            <figure class="pillar__photo"><img src="assets/img/study-session.jpg" alt="Members laughing together at a study session" loading="lazy" width="1800" height="1200"></figure>
-            <h3>Community service</h3>
-            <p>We volunteer around North Philadelphia and at events like the Cherry Blossom Festival. And we hang out: study sessions, socials and a group of friends who show up for each other.</p>
+            <figure class="pillar__photo"><img src="assets/img/study-session.jpg" alt="Members laughing together around a table during a study session" loading="lazy" width="1800" height="1200"></figure>
+            <h3>Community and service</h3>
+            <p>We volunteer around North Philadelphia. Most weeks, though, community just means showing up for each other: study sessions, game nights and socials with people who become your friends.</p>
           </article>
         </div>
       </div>
@@ -271,7 +338,7 @@
           </div>
         </div>
         <figure class="sponsor__photo">
-          <img src="assets/img/formal-group.jpg" alt="The Temple SASE executive board posed on a staircase in business attire" loading="lazy" width="1200" height="1800">
+          <img src="assets/img/meeting.jpg" alt="Temple SASE members smiling around a conference table" loading="lazy" width="1800" height="1200">
         </figure>
       </div>
     </section>
@@ -287,6 +354,7 @@
       <div>
         <h3>Chapter</h3>
         <ul>
+          <li><a href="#events">Upcoming events</a></li>
           <li><a href="#what-we-do">What we do</a></li>
           <li><a href="#join">Join us</a></li>
           <li><a href="#faq">FAQ</a></li>
