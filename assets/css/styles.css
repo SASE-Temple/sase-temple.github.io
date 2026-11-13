@@ -449,12 +449,12 @@ p a, li a, dd a { color: var(--cherry-bright); text-underline-offset: 3px; }
 
 .award-group + .award-group { margin-top: clamp(56px, 7vw, 88px); }
 .award-group__title {
-  display: flex; align-items: center; gap: 12px;
-  font-family: var(--font-display); font-weight: 400; font-size: clamp(1.6rem, 2.6vw, 2.1rem); margin: 0 0 22px;
+  display: flex; align-items: center; gap: 16px;
+  font-family: var(--font-display); font-weight: 400; font-size: clamp(2.2rem, 3.6vw, 3rem); line-height: 1.05; margin: 0 0 28px;
 }
 .award-group__n {
-  font-family: var(--font-body); font-size: 0.9rem; font-weight: 600;
-  min-width: 30px; height: 30px; padding: 0 8px; border-radius: 999px; display: inline-grid; place-items: center;
+  font-family: var(--font-body); font-size: 1rem; font-weight: 600;
+  min-width: 36px; height: 36px; padding: 0 10px; border-radius: 999px; display: inline-grid; place-items: center;
   background: var(--cherry-bright); color: var(--paper);
 }
 .award-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 16px; align-items: start; }
@@ -508,6 +508,135 @@ p a, li a, dd a { color: var(--cherry-bright); text-underline-offset: 3px; }
 .venue p { margin: 0 0 28px; opacity: 0.85; max-width: 40ch; }
 .venue__map { width: 100%; aspect-ratio: 4 / 3; border: 0; border-radius: var(--radius); background: var(--cherry-deep); display: block; }
 @media (max-width: 860px) { .venue { grid-template-columns: 1fr; } }
+
+/* ============================================================
+   SASE Summit theme (summit.html, <body class="summit">)
+   Matches the Summit graphic: red paper, cream type, white
+   brush sketches, "sase" in script over a bold "SUMMIT", and
+   gold from the Summit logo in place of ember orange. Most
+   components re-skin through the variables below.
+   ============================================================ */
+
+body.summit {
+  --summit-red: #a8302a;      /* the graphic's paper red */
+  --summit-red-deep: #7c201c;
+  --summit-cream: #f5e6e5;    /* the graphic's type color */
+  --gold: #c9a227;
+  --gold-soft: #ecd28b;
+
+  --cherry: var(--summit-red);
+  --cherry-deep: var(--summit-red-deep);
+  --cherry-bright: var(--summit-red);
+  --navy: var(--summit-red-deep);
+  --navy-deep: #5c1714;
+  --linen: #f4ece6;
+  --paper: #fbf6f2;
+  --ink: #2b1513;
+  --ink-soft: #6b4a46;
+  --rule: rgba(43, 21, 19, 0.14);
+  --rule-light: rgba(245, 230, 229, 0.28);
+  --ember: var(--gold);
+  --ember-soft: var(--gold-soft);
+
+  --font-display: "Lexend", "Jost", system-ui, sans-serif;
+  --font-script: "Pinyon Script", "Snell Roundhand", cursive;
+}
+.summit .h2 { font-weight: 400; letter-spacing: -0.01em; }
+.summit .script { font-family: var(--font-script); font-weight: 400; font-size: 1.25em; line-height: 0.8; letter-spacing: 0; }
+
+/* Red paper: fine grain plus a soft fold of light, drawn in CSS so no stock texture is shipped */
+.paper-red {
+  background-color: var(--summit-red);
+  background-image:
+    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='240' height='240'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='3' stitchTiles='stitch'/%3E%3CfeColorMatrix values='0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.22 0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E"),
+    radial-gradient(120% 70% at 85% -10%, rgba(255, 255, 255, 0.10), transparent 60%),
+    radial-gradient(90% 60% at 0% 110%, rgba(60, 0, 0, 0.28), transparent 65%),
+    linear-gradient(172deg, transparent 62%, rgba(255, 255, 255, 0.05) 62.4%, transparent 63.5%);
+  color: var(--summit-cream);
+}
+.summit .section--red { color: var(--summit-cream); }
+.summit .section--red .section__intro,
+.summit .section--red .nominate__help { color: rgba(245, 230, 229, 0.85); }
+.summit .section--red a:not(.btn):not(.nom-card) { color: var(--summit-cream); }
+
+/* Header over the red hero */
+.summit .site-header.is-solid { background: rgba(251, 246, 242, 0.95); }
+.summit .nav__cta:hover { color: var(--ink); }
+
+/* Hero: the graphic's lockup, re-set for a wide banner */
+.summit .gala-hero { padding: clamp(120px, 14vw, 170px) 0 clamp(56px, 7vw, 96px); color: var(--summit-cream); }
+.gala-hero__grid { display: grid; grid-template-columns: 1.2fr 0.8fr; gap: clamp(24px, 4vw, 64px); align-items: center; }
+.summit .gala-hero__title {
+  font-family: var(--font-display); font-weight: 700; font-size: clamp(3.8rem, 10vw, 8.4rem);
+  line-height: 0.92; letter-spacing: -0.01em; max-width: none; margin: 0;
+}
+.gala-hero__script {
+  display: block; position: relative; z-index: 1;
+  font-family: var(--font-script); font-weight: 400; font-size: 1.12em; line-height: 0.5;
+  margin: 0 0 -0.16em 0.62em;
+}
+.gala-hero__tag { font-family: var(--font-display); font-weight: 300; font-size: clamp(1.35rem, 2.6vw, 2.2rem); line-height: 1.2; margin: 0.45em 0 0; }
+/* About the Summit: one full-width statement under the banner */
+.summit-about { background: var(--linen); padding: clamp(48px, 6vw, 80px) 0; }
+.summit-about p { margin: 0; font-size: clamp(1.1rem, 1.45vw, 1.3rem); line-height: 1.7; color: var(--ink); }
+.summit-about .summit-about__note {
+  margin-top: 1.4em; padding-top: 1.2em; border-top: 1px solid var(--rule);
+  font-family: var(--font-display); font-weight: 500; color: var(--summit-red);
+}
+.summit .gala-hero__facts dd { font-weight: 500; }
+.gala-hero__sketch { width: 100%; max-width: 420px; height: auto; justify-self: center; }
+@media (max-width: 860px) {
+  .gala-hero__grid { grid-template-columns: 1fr; }
+  .gala-hero__sketch { max-width: 240px; justify-self: end; margin-top: -8px; }
+}
+
+/* Sketches drawn in ink: the white cutouts tinted red with a mask, for cream sections */
+.sketch { display: block; flex: none; pointer-events: none; }
+.sketch--ink {
+  background: var(--summit-red);
+  -webkit-mask: var(--sketch) center / contain no-repeat;
+  mask: var(--sketch) center / contain no-repeat;
+}
+.sketch--ribbon  { --sketch: url("../img/sketches/ribbon-dancer.png");  width: 150px; aspect-ratio: 680 / 780; }
+.sketch--martial { --sketch: url("../img/sketches/martial-artist.png"); width: 120px; aspect-ratio: 652 / 1000; }
+.sketch--twirl   { --sketch: url("../img/sketches/twirl-dancer.png");   width: 150px; aspect-ratio: 638 / 1100; }
+
+.summit #awards .section__head { grid-template-columns: 5fr 6fr auto; }
+.summit #awards .sketch--twirl { grid-column: 3; grid-row: 1; align-self: end; }
+.award-group__head { display: flex; align-items: flex-end; justify-content: space-between; gap: 24px; margin-bottom: 28px; }
+.award-group__head .award-group__title { margin: 0; }
+.summit .award-group__title { font-weight: 700; }
+.summit .award-group__title .script { font-weight: 400; margin-right: 0.08em; }
+@media (max-width: 900px) {
+  .summit #awards .section__head { grid-template-columns: 1fr; }
+  .summit #awards .sketch--twirl { display: none; }
+  .sketch--ribbon { width: 96px; }
+  .sketch--martial { width: 80px; }
+}
+@media (max-width: 600px) {
+  .award-group__head .sketch { display: none; }
+  .summit .award-group__title { flex-wrap: wrap; }
+}
+
+/* Nominate on red paper: cream cards */
+.summit .nom-card { background: var(--paper); color: var(--summit-red); box-shadow: 0 18px 40px -24px rgba(40, 0, 0, 0.6); }
+.summit .nom-card p { color: var(--ink-soft); opacity: 1; }
+.summit .nom-card__go { background: var(--summit-red); color: var(--summit-cream); }
+.summit .nom-card--navy .nom-card__go { background: var(--summit-red-deep); }
+.summit #nominate { position: relative; overflow: hidden; }
+.summit #nominate .nominate__help { max-width: 52ch; margin-top: 32px; }
+.section-sketch--quill {
+  position: absolute; right: max(var(--gutter), calc((100vw - var(--max)) / 2 + var(--gutter))); bottom: 18px;
+  width: clamp(200px, 24vw, 300px); height: auto; opacity: 0.95; pointer-events: none;
+}
+@media (max-width: 760px) { .section-sketch--quill { position: static; display: block; width: 200px; margin: 24px 0 0 auto; } }
+
+/* Venue */
+.summit .venue__map { background: var(--summit-red-deep); }
+.venue__sketch { display: block; width: min(300px, 70%); height: auto; margin-top: 36px; }
+
+/* Footer */
+.summit .site-footer { background: #2b1513; }
 
 /* ---------- Motion preferences ---------- */
 

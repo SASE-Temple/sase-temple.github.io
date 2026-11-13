@@ -25,6 +25,18 @@ All links are relative, so the site works at any address without changes.
 - **Inspiration:** originally Monarque Événements, a "Future Archive" editorial layout and warm slide decks. The ✦ sparkle (`.spark`) and soft orange glow survive from that; the drifting photos and numbered sections were removed in the redesign.
 - Respects `prefers-reduced-motion` (the only motion is the hero fade-in). Mobile layout checked at 375px wide with no horizontal scroll.
 
+## SASE Summit page theme (Nov 2026)
+
+The chapter wanted the Summit page to look different from the homepage and match the Summit graphic (`assets/img/summit-graphic.webp`, made in Canva). It is scoped with `<body class="summit">`; the homepage is unaffected.
+
+- **How it works:** `body.summit` redefines the shared color and font variables (`--cherry`, `--navy`, `--paper`, `--ember`, `--font-display` and others) at the end of `styles.css`, so most components re-skin automatically. Add new Summit styling in that block, not by editing shared rules.
+- **Palette:** paper red `--summit-red #a8302a`, cream type `--summit-cream #f5e6e5` (both taken from the Canva file), and gold `--gold #c9a227` from the Summit logo in place of ember orange.
+- **Type:** Lexend for headings ("SUMMIT", h2s, award names) and Pinyon Script for the script accent ("sase", and "Student" / "Club" in the award group titles), matching the graphic's lockup. The Canva file's exact fonts weren't readable through the Canva connector; if the chapter learns the real font names, swap them in `--font-display` / `--font-script` on `body.summit`.
+- **Red paper:** `.paper-red` draws the grain and fold in CSS. The Canva texture is a Canva stock element, so it is not shipped as a file.
+- **Layout:** red paper for the hero, Nominate and Venue; cream paper for key dates and the long award criteria, so they stay readable.
+- **Sketches:** `assets/img/sketches/` holds white-on-transparent brush sketches (waltz couple from the graphic, ribbon dancer, twirl dancer, martial artist, quill, pianist). On red sections they're plain `<img>`s. On cream sections they're tinted red with a CSS mask (`.sketch--ink` plus a `.sketch--name` class that sets the file and aspect ratio). To add one, convert it to white strokes on transparent first; don't drop in a raw black-on-paper image.
+- **Social sharing:** both pages use `assets/img/share-summit.png` (1200×630, the gold Summit logo) as the link preview image.
+
 ## Upcoming events (homepage)
 
 - To add an event, copy the commented `<li class="event">` template in `index.html` into the `events__list`, soonest first. Set `data-date` and `datetime` to `YYYY-MM-DD`. Each event hides itself the day after its date, so nothing needs deleting.

@@ -8,7 +8,8 @@
   // Header turns solid once the dark hero has scrolled past.
   function updateHeader() {
     if (!header) return;
-    var limit = hero ? hero.offsetHeight - 100 : 40;
+    // A hero taller than the screen has text under the header, so go solid almost right away.
+    var limit = hero && hero.offsetHeight < window.innerHeight ? hero.offsetHeight - 100 : 40;
     header.classList.toggle("is-solid", window.scrollY > limit);
   }
   window.addEventListener("scroll", updateHeader, { passive: true });
