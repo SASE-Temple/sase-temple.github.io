@@ -423,9 +423,11 @@ p a, li a, dd a { color: var(--cherry-bright); text-underline-offset: 3px; }
 .timeline li:not(:last-child)::after {
   content: ""; position: absolute; top: 11px; left: 32px; right: -18px; height: 1px; background: var(--rule);
 }
-.timeline time, .timeline__when { font-family: var(--font-display); font-size: 1.5rem; line-height: 1.2; }
-.timeline__when time { font-size: inherit; }
-.timeline .timeline__when { color: inherit; font-size: 1.5rem; }
+.timeline time { font-family: var(--font-display); font-size: 1.5rem; line-height: 1.2; }
+/* Summit timeline: the step name is the heading, the dates sit under it */
+.timeline li > strong:first-child { font-family: var(--font-display); font-weight: 500; font-size: 1.4rem; line-height: 1.2; }
+.timeline .timeline__when { font-family: var(--font-body); font-size: 0.9375rem; font-weight: 600; color: var(--cherry-bright); margin-bottom: 4px; }
+.timeline__when time { font: inherit; }
 .timeline strong { font-weight: 600; }
 .timeline span { color: var(--ink-soft); font-size: 0.9375rem; }
 @media (max-width: 700px) {
