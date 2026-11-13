@@ -631,6 +631,22 @@ body.summit {
 }
 @media (max-width: 760px) { .section-sketch--quill { position: static; display: block; width: 200px; margin: 24px 0 0 auto; } }
 
+/* Awards committee */
+.committee {
+  --cols: 5; --gap: clamp(16px, 2vw, 28px);
+  list-style: none; margin: 0; padding: 0;
+  display: flex; flex-wrap: wrap; justify-content: center; gap: 36px var(--gap);
+}
+.committee__member { flex: 0 0 calc((100% - (var(--cols) - 1) * var(--gap)) / var(--cols)); }
+.committee__member img {
+  display: block; width: 100%; height: auto; aspect-ratio: 1; object-fit: cover;
+  border-radius: 12px; outline: 1px solid var(--rule); outline-offset: 6px; margin-bottom: 18px;
+}
+.committee__member h3 { font-family: var(--font-display); font-weight: 500; font-size: 1.2rem; line-height: 1.2; margin: 0 0 4px; color: var(--summit-red); }
+.committee__member p { margin: 0; color: var(--ink-soft); font-size: 0.9375rem; line-height: 1.45; }
+@media (max-width: 1000px) { .committee { --cols: 3; } }
+@media (max-width: 600px) { .committee { --cols: 2; } }
+
 /* Venue */
 .summit .venue__map { background: var(--summit-red-deep); }
 .venue__sketch { display: block; width: min(300px, 70%); height: auto; margin-top: 36px; }

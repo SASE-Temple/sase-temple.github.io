@@ -35,6 +35,7 @@ The chapter wanted the Summit page to look different from the homepage and match
 - **Red paper:** `.paper-red` draws the grain and fold in CSS. The Canva texture is a Canva stock element, so it is not shipped as a file.
 - **Layout:** red paper for the hero, Nominate and Venue; cream paper for key dates and the long award criteria, so they stay readable.
 - **Sketches:** `assets/img/sketches/` holds white-on-transparent brush sketches (waltz couple from the graphic, ribbon dancer, twirl dancer, martial artist, quill, pianist). On red sections they're plain `<img>`s. On cream sections they're tinted red with a CSS mask (`.sketch--ink` plus a `.sketch--name` class that sets the file and aspect ratio). To add one, convert it to white strokes on transparent first; don't drop in a raw black-on-paper image.
+- **Awards committee:** a section after Nominate (`#committee`) lists the five committee members. Names, titles and photos come from page 5 of the chapter's "SUMMIT" Q&A design in Canva; photos are square crops in `assets/img/committee/`. To change a member, swap the `<li class="committee__member">` and its photo.
 - **Social sharing:** both pages use `assets/img/share-summit.png` (1200×630, the gold Summit logo) as the link preview image.
 
 ## Upcoming events (homepage)
