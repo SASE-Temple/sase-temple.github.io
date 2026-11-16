@@ -627,13 +627,13 @@ body.summit {
   .summit .award-group__title { flex-wrap: wrap; }
 }
 
-/* Nominate on red paper: cream cards */
+/* Apply section on red paper: cream cards */
 .summit .nom-card { background: var(--paper); color: var(--summit-red); box-shadow: 0 18px 40px -24px rgba(40, 0, 0, 0.6); }
 .summit .nom-card p { color: var(--ink-soft); opacity: 1; }
 .summit .nom-card__go { background: var(--summit-red); color: var(--summit-cream); }
 .summit .nom-card--navy .nom-card__go { background: var(--summit-red-deep); }
-.summit #nominate { position: relative; overflow: hidden; }
-.summit #nominate .nominate__help { max-width: 52ch; margin-top: 32px; }
+.summit #apply { position: relative; overflow: hidden; }
+.summit #apply .nominate__help { max-width: 52ch; margin-top: 32px; }
 .section-sketch--quill {
   position: absolute; right: max(var(--gutter), calc((100vw - var(--max)) / 2 + var(--gutter))); bottom: 18px;
   width: clamp(200px, 24vw, 300px); height: auto; opacity: 0.95; pointer-events: none;

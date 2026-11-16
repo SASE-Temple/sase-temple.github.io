@@ -5,7 +5,7 @@ Static website for the Society of Asian Scientists & Engineers (SASE) at Temple 
 ## Files
 
 - `index.html`: chapter homepage. Sections in order: hero (photo of the fall social mixer, captioned), Upcoming events (a big featured card for the AAPI Awards Gala plus a dated event list), What we do (the three SASE pillars with photos), Join us (Discord, Instagram, GroupMe, Suitable, email), Common questions (FAQ), E-board, Sponsor, footer.
-- `summit.html`: gala page. Sections: hero, Key dates (timeline), The awards (10 student + 6 club, each with eligibility, criteria and proof in a collapsible list), Nominate, Venue (with map), footer.
+- `summit.html`: gala page. Sections: hero, Key dates (timeline), The awards (10 student + 6 club, each with eligibility, criteria and proof in a collapsible list), Apply, Awards committee, Venue (with map), footer.
 - The awards content comes from the "Awards and Criteria" Google Sheet. If the criteria change, edit the award cards in `summit.html` directly; each card is an `<article class="award">`.
 - `assets/css/styles.css`: all styles for both pages. Colors and fonts are CSS variables in `:root`.
 - `assets/js/main.js`: header turns solid after the hero, mobile menu, copy-email button (`data-copy`), "Expand all criteria" button on the awards (`data-expand-all`), hides past events (`.event[data-date]`) and fills in deadline countdowns (`data-countdown`), footer year.
@@ -33,9 +33,9 @@ The chapter wanted the Summit page to look different from the homepage and match
 - **Palette:** paper red `--summit-red #a8302a`, cream type `--summit-cream #f5e6e5` (both taken from the Canva file), and gold `--gold #c9a227` from the Summit logo in place of ember orange.
 - **Type:** Lexend for headings ("SUMMIT", h2s, award names) and Pinyon Script for the script accent ("sase", and "Student" / "Club" in the award group titles), matching the graphic's lockup. The Canva file's exact fonts weren't readable through the Canva connector; if the chapter learns the real font names, swap them in `--font-display` / `--font-script` on `body.summit`.
 - **Red paper:** `.paper-red` draws the grain and fold in CSS. The Canva texture is a Canva stock element, so it is not shipped as a file.
-- **Layout:** red paper for the hero, Nominate and Venue; cream paper for key dates and the long award criteria, so they stay readable.
+- **Layout:** red paper for the hero, Apply and Venue; cream paper for key dates and the long award criteria, so they stay readable.
 - **Sketches:** `assets/img/sketches/` holds white-on-transparent brush sketches (waltz couple from the graphic, ribbon dancer, twirl dancer, flying kick, high kick, quill, pianist). The two kicks were one drawing, split in two. Tall sketches go in a third column of a section head (twirl by The awards, high kick by the committee); small ones sit just after an award group title (ribbon dancer, flying kick) so they don't stretch the row. On red sections they're plain `<img>`s. On cream sections they're tinted red with a CSS mask (`.sketch--ink` plus a `.sketch--name` class that sets the file and aspect ratio). To add one, convert it to white strokes on transparent first; don't drop in a raw black-on-paper image.
-- **Awards committee:** a section after Nominate (`#committee`) lists the five committee members. Names, titles and photos come from page 5 of the chapter's "SUMMIT" Q&A design in Canva; photos are square crops in `assets/img/committee/`. To change a member, swap the `<li class="committee__member">` and its photo.
+- **Awards committee:** a section after Apply (`#committee`) lists the five committee members. Names, titles and photos come from page 5 of the chapter's "SUMMIT" Q&A design in Canva; photos are square crops in `assets/img/committee/`. To change a member, swap the `<li class="committee__member">` and its photo.
 - **Social sharing:** both pages use `assets/img/share-summit.png` (1200×630, the gold Summit logo) as the link preview image.
 
 ## Upcoming events (homepage)
@@ -48,8 +48,9 @@ The chapter wanted the Summit page to look different from the homepage and match
 ## Content facts
 
 - Gala: **SASE Summit: AAPI Awards Gala**, Friday, April 16, 2027, Temple Performing Arts Center (1837 N Broad St, Philadelphia, PA 19122).
-- Nominations close Dec 31, 2026. Finalists announced April 1, 2027.
-- Nomination forms: students https://forms.gle/zGwrtAh7cPeC5Cx79, clubs https://forms.gle/AzSv1RMtpjcy8vsPA
+- **Wording:** the chapter says "apply" and "applications", never "nominate" (Nov 2026: "nominate" confused people, since students apply for themselves). The Summit section is `#apply`; its CSS classes (`.nominate`, `.nom-card`) kept their old names.
+- Applications close Dec 31, 2026. Finalists announced April 1, 2027.
+- Application forms: students https://forms.gle/zGwrtAh7cPeC5Cx79, clubs https://forms.gle/AzSv1RMtpjcy8vsPA
 - Links: Discord https://discord.gg/sXgfzkeyc9 (note: the Linktree uses a different invite, https://discord.gg/3wzbmw68aR; confirm which is current), GroupMe https://groupme.com/join_group/100924297/vODMyRft, Linktree https://linktr.ee/sasetemple, Instagram https://www.instagram.com/sasetemple/, Suitable https://app.suitable.co/student-organizations/rLonS6oS8V3z?tab=profile, email temple@saseconnect.org. The chapter no longer uses Owl Connect.
 - The chapter has no sponsors yet. The Sponsors section is about how to sponsor (email the chapter), with no logo wall.
 - E-board 2026–27 (role, name, major, class year) is in the roster in `index.html`.
