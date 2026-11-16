@@ -21,8 +21,8 @@
   --ember: #e8743b;
   --ember-soft: #f2a66e;
 
-  --font-display: "DM Serif Display", Georgia, "Times New Roman", serif;
-  --font-body: "Jost", "Futura", "Century Gothic", system-ui, sans-serif;
+  --font-display: "Plus Jakarta Sans", "Segoe UI", system-ui, sans-serif;
+  --font-body: "Plus Jakarta Sans", "Segoe UI", system-ui, sans-serif;
   --font-cjk: "Noto Serif TC", "Noto Serif KR", "Noto Serif JP", "Noto Serif Devanagari", "Noto Serif Thai", serif;
 
   --gutter: clamp(20px, 4vw, 56px);
@@ -236,6 +236,25 @@ p a, li a, dd a { color: var(--cherry-bright); text-underline-offset: 3px; }
 .feature__countdown { font-family: var(--font-body); font-size: 0.875rem; color: var(--ember-soft); margin-left: 6px; white-space: nowrap; }
 .feature__cta { margin-top: 28px; align-self: flex-start; }
 .feature:hover .feature__cta { background: var(--ember-soft); border-color: var(--ember-soft); color: var(--ink); }
+
+/* Homepage summit card: red to match the Summit graphic, one shade lighter so the poster reads against it */
+body:not(.summit) .feature { background: #b8463d; box-shadow: 0 30px 60px -30px rgba(92, 20, 18, 0.6); }
+body:not(.summit) .feature__photo { background: #a8302a; }
+body:not(.summit) .feature__body::before { background: radial-gradient(circle, rgba(255, 220, 200, 0.22), rgba(255, 220, 200, 0) 65%); }
+body:not(.summit) .feature__kicker,
+body:not(.summit) .feature__countdown { color: #ffe3d4; }
+body:not(.summit) .feature__facts dt { opacity: 0.8; }
+
+/* ---------- Homepage type: modern sans (Plus Jakarta Sans). The summit page sets its own. ---------- */
+body:not(.summit) .display { font-weight: 800; letter-spacing: -0.035em; line-height: 0.95; }
+body:not(.summit) .h2 { font-weight: 700; letter-spacing: -0.025em; line-height: 1.1; }
+body:not(.summit) .feature__title { font-weight: 700; letter-spacing: -0.025em; }
+body:not(.summit) .feature__facts dd,
+body:not(.summit) .event h3,
+body:not(.summit) .pillar h3,
+body:not(.summit) .social__name,
+body:not(.summit) .member__name { font-weight: 600; letter-spacing: -0.015em; }
+body:not(.summit) .event time { font-weight: 700; letter-spacing: -0.02em; }
 
 /* Dated list of everything else */
 .events__list { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(auto-fill, minmax(290px, 1fr)); gap: 14px; }
@@ -543,6 +562,7 @@ body.summit {
   --ember-soft: var(--gold-soft);
 
   --font-display: "Lexend", "Jost", system-ui, sans-serif;
+  --font-body: "Jost", "Futura", "Century Gothic", system-ui, sans-serif;
   --font-script: "Pinyon Script", "Snell Roundhand", cursive;
 }
 .summit .h2 { font-weight: 400; letter-spacing: -0.01em; }
